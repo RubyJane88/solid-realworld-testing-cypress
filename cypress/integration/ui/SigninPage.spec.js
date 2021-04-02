@@ -16,12 +16,7 @@ describe("Sign in Page", () =>  {
     cy.get('[data-testid=input-email]').type(email);
     cy.get('[data-testid=input-password]').type(password);
     cy.get('[data-testid=button-signin-signup]').click();
-
   });
-
-  it('should be able to signin', () => {
-
-});
 
 
 });
