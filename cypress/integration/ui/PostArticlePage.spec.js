@@ -15,9 +15,6 @@ describe("Sign in Page", () => {
   });
 
 
-it('should land on the New Post page', () => {
-
-})
 
 
 });
