@@ -54,6 +54,7 @@ export default ({ slug }) => {
               <fieldset>
                 <fieldset class="form-group">
                   <input
+                    data-testid="input-article-title"
                     type="text"
                     class="form-control form-control-lg"
                     placeholder="Article Title"
@@ -64,6 +65,7 @@ export default ({ slug }) => {
                 </fieldset>
                 <fieldset class="form-group">
                   <input
+                    data-testid="input-article-about"
                     type="text"
                     class="form-control"
                     placeholder="What's this article about?"
@@ -74,6 +76,7 @@ export default ({ slug }) => {
                 </fieldset>
                 <fieldset class="form-group">
                   <textarea
+                    data-testid="input-article-markdown"
                     class="form-control"
                     rows="8"
                     placeholder="Write your article (in markdown)"
@@ -84,6 +87,7 @@ export default ({ slug }) => {
                 </fieldset>
                 <fieldset class="form-group">
                   <input
+                    data-testid="input-enter-tags"
                     type="text"
                     class="form-control"
                     placeholder="Enter tags"
@@ -105,6 +109,7 @@ export default ({ slug }) => {
                   </div>
                 </fieldset>
                 <button
+                  data-testid="button-publish-article"
                   class="btn btn-lg pull-xs-right btn-primary"
                   type="button"
                   disabled={state.inProgress}

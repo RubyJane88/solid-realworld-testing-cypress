@@ -58,3 +58,11 @@ Cypress.Commands.add('putCommand', (url, requestBody) => {
     body: requestBody,
   });
 });
+
+
+Cypress.Commands.add('ArticleInputFieldsCommand', () => {
+  cy.get('[data-testid=input-article-title]').as('ArticleTitle');
+  cy.get('[data-testid=input-article-about]').as('ArticleAbout');
+  cy.get('[data-testid=input-article-markdown]').as('ArticleMarkdown');
+  cy.get('[data-testid=input-enter-tags]').as('tags')
+})

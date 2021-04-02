@@ -14,7 +14,7 @@ describe("Sign in Page", () =>  {
     cy.get('[data-testid=button-signin-signup]').click();
   });
 
-it('should be able to  previews on the Global Feed Page', () => {
+it('should be able to land on the Global Feed Page', () => {
   cy.get('[data-testid=global-feed]').click();
 
 });
