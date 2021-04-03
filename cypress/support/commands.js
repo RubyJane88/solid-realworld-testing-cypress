@@ -66,3 +66,13 @@ Cypress.Commands.add('ArticleInputFieldsCommand', () => {
   cy.get('[data-testid=input-article-markdown]').as('ArticleMarkdown');
   cy.get('[data-testid=input-enter-tags]').as('tags')
 })
+
+Cypress.Commands.add('SettingsInputFieldsCommand', () => {
+  cy.get('[data-testid=profile-picture]').as('ProfilePicture');
+  cy.get('[data-testid=settings-username]').as('Username');
+  cy.get('[data-testid=settings-bio]').as('Bio');
+  cy.get('[data-testid=settings-email]').as('Email');
+  cy.get('[data-testid=settings-password]').as('Password');
+  cy.get('[data-testid=button-update-settings]').as('UpdateSettings');
+  cy.get('[data-testid=button-settings-logout]').as('Logout');
+});

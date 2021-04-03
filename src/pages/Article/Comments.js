@@ -55,6 +55,7 @@ const CommentInput = ({ slug, createComment, loadComments, currentUser }) => {
       <form class="card comment-form" onSubmit={createCommentHandler}>
         <div class="card-block">
           <textarea
+            data-testid="write-comment"
             class="form-control"
             placeholder="Write a comment..."
             value={state.body}
@@ -65,7 +66,9 @@ const CommentInput = ({ slug, createComment, loadComments, currentUser }) => {
         </div>
         <div class="card-footer">
           <img src={currentUser.image} class="comment-author-img" alt="" />
-          <button class="btn btn-sm btn-primary" type="submit">
+          <button
+            data-testid="button-post-comment"
+            class="btn btn-sm btn-primary" type="submit">
             Post Comment
           </button>
         </div>

@@ -3,7 +3,7 @@ import { useRouter } from "../store";
 export default props => {
   const { getParams } = useRouter();
   return (
-    <a
+    <a data-testid="shared-nav-link"
       class={props.class}
       classList={{ active: props.active || getParams()?.routeName === props.route }}
       href={`#/${props.href || props.route}`}

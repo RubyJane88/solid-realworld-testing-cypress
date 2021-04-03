@@ -5,7 +5,9 @@ import { useStore } from "../../store";
 import Comments from "./Comments";
 
 const ArticleMeta = props => (
-  <div class="article-meta">
+  <div
+    data-testid="article-editor"
+    class="article-meta">
     <NavLink href={`@${props.article?.author.username}`} route="profile">
       <img src={props.article?.author.image} alt="" />
     </NavLink>
@@ -24,9 +26,13 @@ const ArticleMeta = props => (
           route="editor"
           class="btn btn-outline-secondary btn-sm"
         >
-          <i class="ion-edit" /> Edit Article
+          <i
+
+            class="ion-edit" /> Edit Article
         </NavLink>
-        <button class="btn btn-outline-danger btn-sm" onClick={props.onDelete}>
+        <button
+          data-testid="button-delete-article"
+          class="btn btn-outline-danger btn-sm" onClick={props.onDelete}>
           <i class="ion-trash-a" /> Delete Article
         </button>
       </span>
@@ -42,16 +48,19 @@ export default ({ slug }) => {
     handleDeleteArticle = () => deleteArticle(slug).then(() => (location.hash = "/"));
 
   return (
-    <div class="article-page">
+    <div
+      data-testid="article-page"
+      class="article-page">
       <div class="banner">
-        <div class="container">
+        <div
+          data-testid="container-page"
+          class="container">
           <h1>{article()?.title}</h1>
           <ArticleMeta article={article()} canModify={canModify()} onDelete={handleDeleteArticle} />
         </div>
       </div>
 
       <div
-        data-testid="container-page"
         class="container page">
         <div class="row article-content">
           <div class="col-xs-12">

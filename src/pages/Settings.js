@@ -35,6 +35,7 @@ export default () => {
               <fieldset>
                 <fieldset class="form-group">
                   <input
+                    data-testid="profile-picture"
                     class="form-control"
                     type="text"
                     placeholder="URL of profile picture"
@@ -45,6 +46,7 @@ export default () => {
                 </fieldset>
                 <fieldset class="form-group">
                   <input
+                    data-testid="settings-username"
                     class="form-control form-control-lg"
                     type="text"
                     placeholder="Your Name"
@@ -55,6 +57,7 @@ export default () => {
                 </fieldset>
                 <fieldset class="form-group">
                   <textarea
+                    data-testid="settings-bio"
                     class="form-control form-control-lg"
                     rows="8"
                     placeholder="Short bio about you"
@@ -65,7 +68,7 @@ export default () => {
                 </fieldset>
                 <fieldset class="form-group">
                   <input
-
+                    data-testid="settings-email"
                     class="form-control form-control-lg"
                     type="text"
                     placeholder="Email"
@@ -76,7 +79,7 @@ export default () => {
                 </fieldset>
                 <fieldset class="form-group">
                   <input
-
+                    data-testid="settings-password"
                     class="form-control form-control-lg"
                     type="password"
                     placeholder="Password"
@@ -86,6 +89,7 @@ export default () => {
                   />
                 </fieldset>
                 <button
+                  data-testid="button-update-settings"
                   class="btn btn-lg btn-primary pull-xs-right"
                   type="submit"
                   disabled={state.updatingUser}
@@ -96,6 +100,7 @@ export default () => {
             </form>
             <hr />
             <button
+              data-testid="button-settings-logout"
               class="btn btn-outline-danger"
               onClick={() => (logout(), (location.hash = "/"))}
             >
