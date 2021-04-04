@@ -1,7 +1,6 @@
 describe("Sign in Page", () => {
   beforeEach(() => {
-    cy.getCommand("/api/tags/");
-    cy.visit("/");
+    cy.SigninCommand();
   });
 
   it("should land on the Settings Page", () => {
