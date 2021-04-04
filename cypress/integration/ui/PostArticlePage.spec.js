@@ -20,5 +20,10 @@ describe("Articles Page", () => {
     cy.get("@tags").type(tags);
 
     cy.get("[data-testid=button-publish-article]").click();
+
+    //it should be able to post a comment on an article
+    cy.get("[data-testid=article-page]");
+    cy.get("[data-testid=write-comment]").type("Great article!");
+    cy.get("[data-testid=button-post-comment]").click();
   });
 });
